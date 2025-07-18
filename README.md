@@ -1,2 +1,2 @@
 # max7
-This is tech tol website
+This is tech tool website
