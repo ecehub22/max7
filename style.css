@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL RESET (IMPORTANT)
-================================ */
+/* RESET */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,32 +9,26 @@ html, body {
   box-sizing: border-box;
 }
 
-/* ================================
-   ROOT VARIABLES (DESIGN SYSTEM)
-================================ */
+/* VARIABLES */
 :root {
-  --primary: #22d3ee;
   --bg-dark: #020617;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --border: rgba(255, 255, 255, 0.1);
+  --cyan: #22d3ee;
+  --cyan-glow: rgba(34,211,238,0.6);
   --text-main: #ffffff;
-  --text-muted: #c5deff;
-  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --text-muted: #9fb4cc;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
-/* ================================
-   BODY
-================================ */
+/* BODY */
 body {
   background: var(--bg-dark);
   color: var(--text-main);
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   overflow-x: hidden;
 }
 
-/* ================================
-   CANVAS BACKGROUND FIX
-================================ */
+/* CANVAS */
 canvas {
   position: fixed;
   inset: 0;
@@ -44,200 +36,94 @@ canvas {
   display: block;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 .header {
-  width: 100%;
-  padding: 18px 8%;
+  padding: 18px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 800;
+.logo img {
+  height: 42px;
+  filter: drop-shadow(0 0 10px var(--cyan-glow));
 }
 
-.logo span {
-  color: var(--primary);
-}
-
-nav a {
-  margin: 0 14px;
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* ================================
-   BUTTONS
-================================ */
+/* BUTTONS */
 button {
-  padding: 12px 28px;
-  border-radius: 50px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-family: var(--font-heading);
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
-  background: var(--primary);
-  border: none;
+  background: linear-gradient(135deg, #22d3ee, #3ddcff);
   color: #000;
+  border: none;
+  box-shadow: 0 0 20px var(--cyan-glow);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
 }
 
 button:hover {
-  opacity: 0.85;
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* ================================
-   HERO SECTION (TOP SPACE FIXED)
-================================ */
+/* HERO */
 .hero {
   text-align: center;
-  padding: 90px 8% 80px; /* ⬅ upper gap fixed */
+  padding: 110px 8% 90px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
-.hero p {
-  margin-top: 12px;
-  font-size: 1.1rem;
+.text-red {
+  color: #ff3b3b;
+}
+
+.text-pink {
+  color: #ffb3b3;
+}
+
+.text-cyan {
+  color: var(--cyan);
+}
+
+.hero-desc {
+  margin-top: 20px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
   color: var(--text-muted);
 }
 
 .hero-buttons {
-  margin-top: 28px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
-/* ================================
-   SECTIONS
-================================ */
-.section {
-  padding: 80px 8%;
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-/* ================================
-   UNDERLINE
-================================ */
-.underline {
-  width: 70px;
-  height: 4px;
-  background: var(--primary);
-  margin: 12px 0 28px;
-  border-radius: 4px;
-}
-
-/* ================================
-   GRID SYSTEM
-================================ */
-.grid {
-  display: grid;
-  gap: 24px;
-}
-
-.cards-four {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-/* ================================
-   GLASS CARD
-================================ */
-.glass-card {
-  padding: 24px;
-  border-radius: 14px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-  transition: transform 0.4s ease;
-}
-
-.glass-card:hover {
-  transform: translateY(-6px);
-}
-
-/* ================================
-   TEXT UTILITIES
-================================ */
-.muted {
-  color: var(--text-muted);
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #fff 30%, var(--primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ================================
-   PARTNER SECTION
-================================ */
-.partner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-.partner ul {
-  padding-left: 18px;
-}
-
-.partner li {
-  margin-bottom: 12px;
-}
-
-/* ================================
-   FORM
-================================ */
-input,
-select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  background: var(--bg-dark);
-  color: var(--text-main);
-}
-
-/* ================================
-   FOOTER
-================================ */
-.footer {
-  padding: 36px 8%;
-  text-align: center;
-  border-top: 1px solid var(--border);
-}
-
-.footer a {
-  color: var(--text-muted);
-  text-decoration: underline;
-}
-
-/* ================================
-   SCROLL REVEAL ANIMATION
-================================ */
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.9s ease; /* same speed as reference */
+  transition: all 0.9s ease;
 }
 
 .reveal.active {
@@ -245,19 +131,14 @@ select {
   transform: translateY(0);
 }
 
-/* ================================
-   RESPONSIVE (MOBILE)
-================================ */
-@media (max-width: 900px) {
-  .partner {
-    grid-template-columns: 1fr;
+/* MOBILE */
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  nav {
-    display: none;
+  .hero-title {
+    font-size: 3.4rem;
   }
 }
