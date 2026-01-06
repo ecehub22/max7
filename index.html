@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>VATE SoftSys | EdTech & Training</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -22,24 +22,24 @@
   <div class="logo">VATE SoftSys <span>(VSS)</span></div>
   <nav>
     <a href="#">Home</a>
-    <a href="#">Programs</a>
-    <a href="#">Partners</a>
-    <a href="#">Contact</a>
+    <a href="#programs">Programs</a>
+    <a href="#partners">Partners</a>
+    <a href="#contact">Contact</a>
   </nav>
   <button class="btn-primary">Request Curriculum</button>
 </header>
 
 <!-- HERO -->
 <section class="hero reveal">
-  <h1>
+  <h1 class="hero-title">
     Industry-ready training in  
     <span class="gradient-text">GenAI, Cloud & Full Stack</span>
   </h1>
-  <p class="muted">
-    Short-term & long-term programs designed for students, colleges & enterprises.
+  <p class="hero-subtext muted">
+    Short-term & long-term courses for students, colleges & corporates.
   </p>
 
-  <div class="hero-actions">
+  <div class="hero-buttons">
     <button class="btn-primary">Request Curriculum</button>
     <button class="btn-outline">Partner with VSS</button>
   </div>
@@ -50,66 +50,61 @@
   <h2>Who It’s For</h2>
   <div class="underline"></div>
 
-  <div class="grid">
+  <div class="grid cards-four">
     <div class="glass-card">🎓 Students</div>
     <div class="glass-card">🏫 Colleges</div>
-    <div class="glass-card">👨‍🏫 Faculty Development</div>
+    <div class="glass-card">👨‍🏫 Faculty Dev</div>
     <div class="glass-card">🏢 Corporate Upskilling</div>
   </div>
 </section>
 
 <!-- FLAGSHIP PROGRAMS -->
-<section class="section reveal">
+<section id="programs" class="section reveal">
   <h2>Flagship Programs</h2>
   <div class="underline"></div>
 
-  <div class="grid">
+  <div class="grid cards-four">
     <div class="glass-card">
       <i data-lucide="cpu"></i>
       <h3>GenAI</h3>
-      <p class="muted">60-Hour Program • Hands-on Labs</p>
+      <p class="muted">60-Hour | Labs</p>
     </div>
-
     <div class="glass-card">
       <i data-lucide="layers"></i>
       <h3>Full Stack + Cloud</h3>
-      <p class="muted">Frontend, Backend & Cloud Fundamentals</p>
+      <p class="muted">Fundamentals</p>
     </div>
-
     <div class="glass-card">
       <i data-lucide="database"></i>
       <h3>Python + Data</h3>
-      <p class="muted">Programming & Data Foundations</p>
+      <p class="muted">Core Foundations</p>
     </div>
-
     <div class="glass-card">
       <i data-lucide="server"></i>
       <h3>DBA Basics + Advanced</h3>
-      <p class="muted">Database Administration Training</p>
+      <p class="muted">DB Admin Training</p>
     </div>
   </div>
 </section>
 
-<!-- COLLEGE PARTNER MODEL -->
-<section class="section partner reveal">
+<!-- PARTNERS -->
+<section id="partners" class="section partner reveal">
   <div class="partner-left">
     <h2>College Partner Model & Delivery</h2>
     <div class="underline"></div>
-
-    <ul>
-      <li>✔ MoU & Co-Branded Certificates</li>
-      <li>✔ Industry-Aligned Curriculum</li>
-      <li>✔ Placement Readiness Support</li>
-      <li>✔ Faculty Enablement Programs</li>
+    <ul class="muted">
+      <li>MoU + Co-Branded Certificates</li>
+      <li>Industry-Aligned Curriculum</li>
+      <li>Placement Readiness</li>
+      <li>Faculty Enablement</li>
     </ul>
   </div>
 
   <div class="partner-right glass-card">
     <h3>Schedule a Call</h3>
-
     <form>
-      <input type="text" placeholder="College Name" required />
-      <input type="number" placeholder="Batch Size" required />
+      <input type="text" placeholder="College Name" required>
+      <input type="number" placeholder="Batch Size" required>
       <select required>
         <option value="">Preferred Program</option>
         <option>GenAI</option>
@@ -117,19 +112,20 @@
         <option>Python + Data</option>
         <option>DBA</option>
       </select>
-      <button type="submit" class="btn-primary">Submit</button>
+      <button class="btn-primary">Submit</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer id="contact" class="footer reveal">
   <p>© 2025 VATE SoftSys (VSS)</p>
-  <p class="muted">info@vatesoftsys.com | +91-XXXXXXXXXX</p>
-  <a href="#" class="muted">Download Brochure</a>
+  <p class="muted">Email: info@vatesoftsys.com | +91-XXXXXXXXXX</p>
+  <a href="#" class="muted underline-link">Download Brochure</a>
 </footer>
 
 <script src="script.js"></script>
 <script>lucide.createIcons();</script>
+
 </body>
 </html>
