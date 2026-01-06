@@ -2,53 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VATE SoftSys (VSS)</title>
+  <title>VATE SoftSys | EdTech & Training</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- LUCIDE ICONS -->
+  <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BACKGROUND -->
 <canvas id="bg-canvas"></canvas>
 
 <!-- HEADER -->
-<header class="header">
-  <div class="logo">
-    <img src="logo.png" alt="VSS Logo">
-  </div>
-  <button class="btn-primary">Get Started</button>
+<header class="header reveal">
+  <div class="logo">VATE SoftSys <span>(VSS)</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#partners">Partners</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="btn-primary">Request Curriculum</button>
 </header>
 
 <!-- HERO -->
 <section class="hero reveal">
   <h1 class="hero-title">
-    <span class="text-red">Learn.</span>
-    <span class="text-pink">Get Hired.</span><br>
-    <span class="text-cyan">Build with AI.</span>
+    Industry-ready training in  
+    <span class="gradient-text">GenAI, Cloud & Full Stack</span>
   </h1>
-
-  <p class="hero-desc">
-    VSS is a 3-in-1 partner for colleges, employers, and AI buyers.
-    We bridge the gap between technical education and industry-scale implementation.
+  <p class="hero-subtext muted">
+    Short-term & long-term courses for students, colleges & corporates.
   </p>
 
   <div class="hero-buttons">
-    <button class="btn-primary">Student / College</button>
-    <button class="btn-outline">Hiring Partner</button>
-    <button class="btn-outline">AI Solutions</button>
+    <button class="btn-primary">Request Curriculum</button>
+    <button class="btn-outline">Partner with VSS</button>
   </div>
 </section>
 
+<!-- WHO IT'S FOR -->
+<section class="section reveal">
+  <h2>Who It’s For</h2>
+  <div class="underline"></div>
+
+  <div class="grid cards-four">
+    <div class="glass-card">🎓 Students</div>
+    <div class="glass-card">🏫 Colleges</div>
+    <div class="glass-card">👨‍🏫 Faculty Dev</div>
+    <div class="glass-card">🏢 Corporate Upskilling</div>
+  </div>
+</section>
+
+<!-- FLAGSHIP PROGRAMS -->
+<section id="programs" class="section reveal">
+  <h2>Flagship Programs</h2>
+  <div class="underline"></div>
+
+  <div class="grid cards-four">
+    <div class="glass-card">
+      <i data-lucide="cpu"></i>
+      <h3>GenAI</h3>
+      <p class="muted">60-Hour | Labs</p>
+    </div>
+    <div class="glass-card">
+      <i data-lucide="layers"></i>
+      <h3>Full Stack + Cloud</h3>
+      <p class="muted">Fundamentals</p>
+    </div>
+    <div class="glass-card">
+      <i data-lucide="database"></i>
+      <h3>Python + Data</h3>
+      <p class="muted">Core Foundations</p>
+    </div>
+    <div class="glass-card">
+      <i data-lucide="server"></i>
+      <h3>DBA Basics + Advanced</h3>
+      <p class="muted">DB Admin Training</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners" class="section partner reveal">
+  <div class="partner-left">
+    <h2>College Partner Model & Delivery</h2>
+    <div class="underline"></div>
+    <ul class="muted">
+      <li>MoU + Co-Branded Certificates</li>
+      <li>Industry-Aligned Curriculum</li>
+      <li>Placement Readiness</li>
+      <li>Faculty Enablement</li>
+    </ul>
+  </div>
+
+  <div class="partner-right glass-card">
+    <h3>Schedule a Call</h3>
+    <form>
+      <input type="text" placeholder="College Name" required>
+      <input type="number" placeholder="Batch Size" required>
+      <select required>
+        <option value="">Preferred Program</option>
+        <option>GenAI</option>
+        <option>Full Stack + Cloud</option>
+        <option>Python + Data</option>
+        <option>DBA</option>
+      </select>
+      <button class="btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer reveal">
+  <p>© 2025 VATE SoftSys (VSS)</p>
+  <p class="muted">Email: info@vatesoftsys.com | +91-XXXXXXXXXX</p>
+  <a href="#" class="muted underline-link">Download Brochure</a>
+</footer>
+
 <script src="script.js"></script>
-<script>
-  lucide.createIcons();
-</script>
+<script>lucide.createIcons();</script>
+
 </body>
 </html>
