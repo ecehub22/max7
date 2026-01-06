@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>VSS Design System</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>VATE SoftSys | EdTech & Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,70 +11,125 @@
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <canvas id="bg-canvas"></canvas>
 
-<header class="container reveal">
-  <h1 class="gradient-text">VATE SoftSys – Design System</h1>
-  <p class="muted">Dark Tech UI reference for all pages</p>
+<!-- HEADER -->
+<header class="header reveal">
+  <div class="logo">VATE SoftSys <span>(VSS)</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Programs</a>
+    <a href="#">Partners</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="btn-primary">Request Curriculum</button>
 </header>
 
-<!-- TYPOGRAPHY -->
-<section class="container reveal">
-  <h2>Typography</h2>
-  <div class="underline"></div>
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>
+    Industry-ready training in  
+    <span class="gradient-text">GenAI, Cloud & Full Stack</span>
+  </h1>
+  <p class="muted">
+    Short-term & long-term programs designed for students, colleges & enterprises.
+  </p>
 
-  <h1>Heading 1 – Extra Bold</h1>
-  <h2>Heading 2 – Section Title</h2>
-  <p class="muted">Muted subtext using --text-muted</p>
+  <div class="hero-actions">
+    <button class="btn-primary">Request Curriculum</button>
+    <button class="btn-outline">Partner with VSS</button>
+  </div>
 </section>
 
-<!-- BUTTONS -->
-<section class="container reveal">
-  <h2>Buttons</h2>
+<!-- WHO IT'S FOR -->
+<section class="section reveal">
+  <h2>Who It’s For</h2>
   <div class="underline"></div>
 
-  <button class="btn-primary">Primary Button</button>
-  <button class="btn-outline">Outline Button</button>
+  <div class="grid">
+    <div class="glass-card">🎓 Students</div>
+    <div class="glass-card">🏫 Colleges</div>
+    <div class="glass-card">👨‍🏫 Faculty Development</div>
+    <div class="glass-card">🏢 Corporate Upskilling</div>
+  </div>
 </section>
 
-<!-- GLASS CARDS -->
-<section class="container reveal">
-  <h2>Glass Cards</h2>
+<!-- FLAGSHIP PROGRAMS -->
+<section class="section reveal">
+  <h2>Flagship Programs</h2>
   <div class="underline"></div>
 
   <div class="grid">
     <div class="glass-card">
       <i data-lucide="cpu"></i>
-      <h3>GenAI Module</h3>
-      <p class="muted">Hands-on industry labs</p>
+      <h3>GenAI</h3>
+      <p class="muted">60-Hour Program • Hands-on Labs</p>
     </div>
 
     <div class="glass-card">
-      <i data-lucide="cloud"></i>
-      <h3>Cloud Training</h3>
-      <p class="muted">AWS • Azure • GCP basics</p>
+      <i data-lucide="layers"></i>
+      <h3>Full Stack + Cloud</h3>
+      <p class="muted">Frontend, Backend & Cloud Fundamentals</p>
     </div>
 
     <div class="glass-card">
-      <i data-lucide="code"></i>
-      <h3>Full Stack</h3>
-      <p class="muted">Frontend + Backend</p>
+      <i data-lucide="database"></i>
+      <h3>Python + Data</h3>
+      <p class="muted">Programming & Data Foundations</p>
+    </div>
+
+    <div class="glass-card">
+      <i data-lucide="server"></i>
+      <h3>DBA Basics + Advanced</h3>
+      <p class="muted">Database Administration Training</p>
     </div>
   </div>
 </section>
 
-<footer class="container">
-  <p class="muted">© 2025 VATE SoftSys (VSS)</p>
+<!-- COLLEGE PARTNER MODEL -->
+<section class="section partner reveal">
+  <div class="partner-left">
+    <h2>College Partner Model & Delivery</h2>
+    <div class="underline"></div>
+
+    <ul>
+      <li>✔ MoU & Co-Branded Certificates</li>
+      <li>✔ Industry-Aligned Curriculum</li>
+      <li>✔ Placement Readiness Support</li>
+      <li>✔ Faculty Enablement Programs</li>
+    </ul>
+  </div>
+
+  <div class="partner-right glass-card">
+    <h3>Schedule a Call</h3>
+
+    <form>
+      <input type="text" placeholder="College Name" required />
+      <input type="number" placeholder="Batch Size" required />
+      <select required>
+        <option value="">Preferred Program</option>
+        <option>GenAI</option>
+        <option>Full Stack + Cloud</option>
+        <option>Python + Data</option>
+        <option>DBA</option>
+      </select>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 VATE SoftSys (VSS)</p>
+  <p class="muted">info@vatesoftsys.com | +91-XXXXXXXXXX</p>
+  <a href="#" class="muted">Download Brochure</a>
 </footer>
 
 <script src="script.js"></script>
-<script>
-  lucide.createIcons();
-</script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
-
