@@ -1,99 +1,91 @@
-:root {
-  --primary: #22d3ee;
-  --bg-dark: #020617;
-  --text-main: #ffffff;
-  --text-muted: #c5deff;
-  --card-bg: rgba(255,255,255,0.03);
-  --border: rgba(255,255,255,0.1);
-  --font-main: 'Plus Jakarta Sans', sans-serif;
+/* ================================
+   GLOBAL RESET (IMPORTANT)
+================================ */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-main);
 }
 
+/* ================================
+   ROOT VARIABLES (DESIGN SYSTEM)
+================================ */
+:root {
+  --primary: #22d3ee;
+  --bg-dark: #020617;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-muted: #c5deff;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ================================
+   BODY
+================================ */
 body {
   background: var(--bg-dark);
   color: var(--text-main);
-  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
-/* HEADER */
+/* ================================
+   CANVAS BACKGROUND FIX
+================================ */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: block;
+}
+
+/* ================================
+   HEADER
+================================ */
 .header {
+  width: 100%;
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
 }
 
-.logo span { color: var(--primary); }
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--primary);
+}
 
 nav a {
-  margin: 0 15px;
+  margin: 0 14px;
   color: var(--text-main);
   text-decoration: none;
   font-weight: 500;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 120px 8%;
-}
-
-.hero-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-}
-
-.hero-subtext {
-  margin-top: 12px;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-}
-
-.hero-buttons button {
-  margin: 18px 12px;
-}
-
-/* SECTION */
-.section {
-  padding: 80px 8%;
-}
-
-.underline {
-  width: 80px;
-  height: 4px;
-  background: var(--primary);
-  border-radius: 3px;
-  margin: 10px 0 24px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  gap: 24px;
-}
-
-.cards-four {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-/* BUTTONS */
+/* ================================
+   BUTTONS
+================================ */
 button {
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
   background: var(--primary);
   border: none;
+  color: #000;
 }
 
 .btn-outline {
@@ -103,32 +95,119 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* GLASS CARD */
+/* ================================
+   HERO SECTION (TOP SPACE FIXED)
+================================ */
+.hero {
+  text-align: center;
+  padding: 90px 8% 80px; /* ⬅ upper gap fixed */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  margin-top: 28px;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+.section {
+  padding: 80px 8%;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* ================================
+   UNDERLINE
+================================ */
+.underline {
+  width: 70px;
+  height: 4px;
+  background: var(--primary);
+  margin: 12px 0 28px;
+  border-radius: 4px;
+}
+
+/* ================================
+   GRID SYSTEM
+================================ */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.cards-four {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* ================================
+   GLASS CARD
+================================ */
 .glass-card {
   padding: 24px;
   border-radius: 14px;
   background: var(--card-bg);
   border: 1px solid var(--border);
   backdrop-filter: blur(10px);
-  transition: 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .glass-card:hover {
   transform: translateY(-6px);
 }
 
-/* PARTNER SECTION */
+/* ================================
+   TEXT UTILITIES
+================================ */
+.muted {
+  color: var(--text-muted);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================================
+   PARTNER SECTION
+================================ */
 .partner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 
-/* INPUTS */
-input, select {
+.partner ul {
+  padding-left: 18px;
+}
+
+.partner li {
+  margin-bottom: 12px;
+}
+
+/* ================================
+   FORM
+================================ */
+input,
+select {
   width: 100%;
   padding: 12px;
   margin-bottom: 14px;
@@ -138,27 +217,47 @@ input, select {
   color: var(--text-main);
 }
 
-/* FOOTER */
+/* ================================
+   FOOTER
+================================ */
 .footer {
+  padding: 36px 8%;
   text-align: center;
-  padding: 32px 8%;
+  border-top: 1px solid var(--border);
 }
 
-.underline-link {
-  display: inline-block;
-  margin-top: 8px;
-  text-decoration: underline;
+.footer a {
   color: var(--text-muted);
+  text-decoration: underline;
 }
 
-/* SCROLL REVEAL */
+/* ================================
+   SCROLL REVEAL ANIMATION
+================================ */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: 0.9s ease;
+  transition: all 0.9s ease; /* same speed as reference */
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ================================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 900px) {
+  .partner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    display: none;
+  }
 }
