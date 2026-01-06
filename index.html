@@ -1,2 +1,80 @@
-# max7
-This is tech tool website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VSS Design System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<header class="container reveal">
+  <h1 class="gradient-text">VATE SoftSys – Design System</h1>
+  <p class="muted">Dark Tech UI reference for all pages</p>
+</header>
+
+<!-- TYPOGRAPHY -->
+<section class="container reveal">
+  <h2>Typography</h2>
+  <div class="underline"></div>
+
+  <h1>Heading 1 – Extra Bold</h1>
+  <h2>Heading 2 – Section Title</h2>
+  <p class="muted">Muted subtext using --text-muted</p>
+</section>
+
+<!-- BUTTONS -->
+<section class="container reveal">
+  <h2>Buttons</h2>
+  <div class="underline"></div>
+
+  <button class="btn-primary">Primary Button</button>
+  <button class="btn-outline">Outline Button</button>
+</section>
+
+<!-- GLASS CARDS -->
+<section class="container reveal">
+  <h2>Glass Cards</h2>
+  <div class="underline"></div>
+
+  <div class="grid">
+    <div class="glass-card">
+      <i data-lucide="cpu"></i>
+      <h3>GenAI Module</h3>
+      <p class="muted">Hands-on industry labs</p>
+    </div>
+
+    <div class="glass-card">
+      <i data-lucide="cloud"></i>
+      <h3>Cloud Training</h3>
+      <p class="muted">AWS • Azure • GCP basics</p>
+    </div>
+
+    <div class="glass-card">
+      <i data-lucide="code"></i>
+      <h3>Full Stack</h3>
+      <p class="muted">Frontend + Backend</p>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <p class="muted">© 2025 VATE SoftSys (VSS)</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>
+
