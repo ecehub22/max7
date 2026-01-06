@@ -1,0 +1,125 @@
+:root {
+    --primary: #22d3ee;
+    --primary-glow: rgba(34, 211, 238, 0.3);
+    --bg-dark: #020617;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: #c5deff;
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* LAYOUT */
+.container {
+  padding: 80px 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* TEXT */
+h1, h2 {
+  font-weight: 800;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+/* GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* UNDERLINE */
+.underline {
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  margin: 14px 0 30px;
+  border-radius: 2px;
+}
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* GLASS CARD */
+.glass-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--mouse-x) var(--mouse-y),
+    var(--primary-glow),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
