@@ -191,11 +191,12 @@ button:hover {
   border: 1px solid var(--border);
   backdrop-filter: blur(14px);
   transition: 0.4s ease;
+  border-color:#ff0000;
 }
 
 .glass-card:hover {
   transform: translateY(-8px);
-  border-color: var(--primary);
+  border-color:#ff0000;
 }
 
 /* ================================
